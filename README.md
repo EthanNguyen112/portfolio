@@ -13,5 +13,5 @@ Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://
 
 
 
-##Resourced Used
+## Resourced Used
 Used https://github.com/dillionverma/portfolio as a template.

@@ -24,6 +24,9 @@ export const DATA = {
     "Kubernetes",
     "Java",
     "C++",
+    "Verilog",
+    "Bash",
+    "VBscript"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -98,6 +101,7 @@ export const DATA = {
         "Stripe",
         "Shadcn UI",
         "Magic UI",
+
       ],
       links: [
         {
