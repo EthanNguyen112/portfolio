@@ -18,11 +18,6 @@ export const DATA = {
     "Typescript",
     "Node.js",
     "Python",
-    "Go",
-    "Postgres",
-    "Docker",
-    "Kubernetes",
-    "Java",
     "C++",
     "Verilog",
     "Bash",
@@ -33,8 +28,8 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "Ethannguyen112@gmail.com",
+    tel: "+1 (714) 913-5777",
     social: {
       GitHub: {
         name: "GitHub",
@@ -85,7 +80,7 @@ export const DATA = {
     },
   ],
   projects: [
-    {
+    /*{
       title: "Chat Collect",
       href: "https://chatcollect.com",
       dates: "Jan 2024 - Feb 2024",
@@ -208,7 +203,9 @@ export const DATA = {
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },
+    */
   ],
+  /*
   hackathons: [
     {
       title: "Hack Western 5",
@@ -594,4 +591,6 @@ export const DATA = {
       ],
     },
   ],
+  */
+
 } as const;
