@@ -122,7 +122,7 @@ export default function Page() {
                   Previous Projects worked on
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from Iphone shortcuts to . Here are a few of my
+                  I&apos;ve worked on a variety of projects, from Iphone shortcuts to creating Remote controlled cars. Here are a few of my
                   favorites.
                 </p>
               </div>
@@ -162,14 +162,14 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                I reply fastest on my {" "}
                 <Link
                   href={DATA.contact.social.GitHub.url}
                   className="text-blue-500 hover:underline"
                 >
-                  on GitHub
+                  Email
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
+                and I&apos;ll respond whenever I can. No
                 soliciting.
               </p>
             </div>
