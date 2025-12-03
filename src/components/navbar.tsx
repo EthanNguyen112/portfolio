@@ -1,4 +1,6 @@
-import { Dock, DockIcon } from "@/components/magicui/dock";
+"use client";
+
+import { useState, useRef, useEffect } from "react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -10,67 +12,135 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);          // dropdown container
+  const buttonRef = useRef<HTMLButtonElement>(null);             // hamburger button
+
+  // CLICK OUTSIDE HANDLER
+  useEffect(() => {
+    interface ClickOutsideEvent extends MouseEvent {
+      target: EventTarget | null;
+    }
+
+    function handleClickOutside(event: ClickOutsideEvent): void {
+      // If dropdown is closed, do nothing
+      if (!open) return;
+
+      const dropdownEl: HTMLDivElement | null = containerRef.current;
+      const buttonEl: HTMLButtonElement | null = buttonRef.current;
+
+      // If click is outside BOTH the dropdown and the button → close
+      if (
+      dropdownEl &&
+      !dropdownEl.contains(event.target as Node) &&
+      buttonEl &&
+      !buttonEl.contains(event.target as Node)
+      ) {
+      setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open]);
+
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
-      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
-        {DATA.navbar.map((item) => (
-          <DockIcon key={item.href}>
+    <div className="pointer-events-none fixed inset-0 z-30">
+
+      {/* BOTTOM GRADIENT */}
+      <div
+        className="
+        fixed bottom-0 inset-x-0 h-16 w-full 
+        bg-[linear-gradient(to_top,rgba(79,70,229,0.4),rgba(0,0,0,0))] 
+        dark:bg-[linear-gradient(to_top,rgba(0,0,0,0.9),rgba(0,0,0,0))] 
+        backdrop-blur-xl 
+        [-webkit-mask-image:linear-gradient(to_top,black,transparent)]
+      "
+      ></div>
+
+      {/* TOP RIGHT MENU */}
+      <div className="pointer-events-auto fixed top-4 right-4 z-50 flex flex-col items-end">
+
+        {/* HAMBURGER / X BUTTON */}
+        <button
+          ref={buttonRef}
+          onClick={() => setOpen(!open)}
+          className={cn(
+            buttonVariants({ variant: "ghost", size: "icon" }),
+            "size-10 bg-black/20 dark:bg-black/40 backdrop-blur-xl border border-white/10 transition-colors"
+          )}
+        >
+          <div className="transition-transform duration-200">
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </div>
+        </button>
+
+        {/* DROPDOWN */}
+        <div
+          ref={containerRef}
+          className={cn(
+            "overflow-hidden transition-all duration-300 ease-out origin-top",
+            open ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+          )}
+        >
+          <div
+            className="flex flex-col gap-3 p-4 rounded-xl shadow-xl bg-white/80 dark:bg-black/70 backdrop-blur-2xl border border-black/10 dark:border-white/10">
+
+            {/* Theme toggle */}
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="flex items-center justify-center">
+                  <ModeToggle />
+                </div>
+              </TooltipTrigger>
+            </Tooltip>
+
+            <Separator />
+
+            {/* LinkedIn */}
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href={item.href}
+                  href={DATA.contact.social.LinkedIn.url}
+                  target="_blank"
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
+                    "size-10"
                   )}
                 >
-                  <item.icon className="size-4" />
+                  <DATA.contact.social.LinkedIn.icon className="size-4" />
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{item.label}</p>
+                <p>LinkedIn</p>
               </TooltipContent>
             </Tooltip>
-          </DockIcon>
-        ))}
-        <Separator orientation="vertical" className="h-full" />
-        {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-        <Separator orientation="vertical" className="h-full py-2" />
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
-      </Dock>
+
+            {/* GitHub */}
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href={DATA.contact.social.GitHub.url}
+                  target="_blank"
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "size-10"
+                  )}
+                >
+                  <DATA.contact.social.GitHub.icon className="size-4" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>GitHub</p>
+              </TooltipContent>
+            </Tooltip>
+
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
