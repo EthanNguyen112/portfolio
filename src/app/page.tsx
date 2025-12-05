@@ -21,7 +21,13 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hello World, I'm ${DATA.name.split(" ")[0]} `}
+                text={`Hello World,`}
+              />
+              <BlurFadeText
+                delay={BLUR_FADE_DELAY}
+                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                yOffset={8}
+                text={`${DATA.name} here `}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
@@ -91,6 +97,7 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`Graduated ${education.end}`}
+                description={education.description}
               />
             </BlurFade>
           ))}
@@ -116,7 +123,7 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Projects
+                  
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Previous Projects worked on

@@ -7,11 +7,8 @@ export const DATA = {
   url: "https://dillion.io",//Temporary URL
   location: "Fountain Valley, CA",
   locationLink: "https://www.google.com/maps/place/Fountain+Valley,+CA",
-  description:
-    "| Computer Engineer | Software Engineer | WebDeveloper | Tech Enthusiast | ",
-  summary:
-    "I wanted to be an inventor to create and be part of something big. Those ideas influenced me to get a bachelor's degree in Computer engineering from California state university. My experience spans from playing with legos as a kid to working with brilliant minds on nuclear power systems. I've programmed microcontrollers for professors, worked with VBScript in assisting tech writers, and creating Python scripts for SWE managers."
-  ,
+  description:"| Computer Engineer | Software Engineer | Mobile phone technician | Tech Enthusiast | Lifelong learner |",
+  summary: "I wanted to be an inventor to create and be part of something big. Those ideas influenced me to get a bachelor's degree in Computer engineering from California state university. My experience spans from playing with legos as a kid to working with brilliant minds on nuclear power systems. I've programmed microcontrollers for professors, worked with VBScript in assisting tech writers, and creating Python scripts for SWE managers.",
   skills: [
     "React",
     "Next.js",
@@ -66,7 +63,7 @@ export const DATA = {
       start: "June 2019",
       end: "january 2021",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "I automated Jira tracking for more than fifty engineering tickets to eliminate manual reporting and improve project visibility for management, integrated and debugged hardware and software for nuclear power systems to strengthen data accuracy and system reliability, maintained an organized Confluence workspace with updated documentation and product architecture, and developed a GUI-based application that reduced manual documentation effort by thirty percent while ensuring consistent and compliant records.",
     }
   ],
   education: [
@@ -77,6 +74,9 @@ export const DATA = {
       logoUrl: "/ib.png",
       //start: "2016",
       end: "2022",
+      description:
+      "Electrical/Electronics 101, Embedded Systems, Operating Systems, System on Chip Design, Digital Signal Process Design, Computer Architecture, Digital Design Tech Verification, MicroProcessors + Controllers"
+,
     },
   ],
   projects: [
