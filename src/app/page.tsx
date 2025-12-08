@@ -21,13 +21,13 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hello World,`}
+                text={`Hello, My name is  `}
               />
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`${DATA.name} here `}
+                text={`${DATA.name} `}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
@@ -122,11 +122,8 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  
-                </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Previous Projects worked on
+                  Projects worked on
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from Iphone shortcuts to creating Remote controlled cars. Here are a few of my
