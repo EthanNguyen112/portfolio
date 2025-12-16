@@ -52,15 +52,17 @@ export default function Navbar() {
     <div className="pointer-events-none fixed inset-0 z-30">
 
       {/* TOP LEFT NAME */}
-    <div className="pointer-events-auto fixed top-4 left-4 z-50">
-      <Link
-        href="/"
-      
-        className="text-2xl font-bold tracking-tighter sm:text-5xl dark:text-white bckdrop-blur-xl bg-white/50 dark:bg-black/30 p-full py-2 rounded-lg border border-black/10 dark:border-white/10">
-        Ethan Nguyen's Portfolio
-      </Link>
+     <div className="w-full flex items-center px-6 py-4 
+                  backdrop-blur-xl bg-white/50 dark:bg-black/30 
+                  border-b border-black/10 dark:border-white/10">
 
-    </div>
+    <Link
+      href="/"
+      className="text-2xl font-bold tracking-tighter sm:text-5xl dark:text-white"
+    >
+      Ethan Nguyen's Portfolio
+    </Link>
+  </div>
 
       {/* BOTTOM GRADIENT */}
       <div
