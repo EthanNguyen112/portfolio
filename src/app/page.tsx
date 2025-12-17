@@ -5,6 +5,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import RoleCarousel from "@/components/role-carousel";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -29,11 +30,11 @@ export default function Page() {
                 yOffset={8}
                 text={`${DATA.name} `}
               />
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <div className="max-w-[600px] md:text-xl">
+                <RoleCarousel 
+                delay={BLUR_FADE_DELAY} 
+                />
+              </div>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">

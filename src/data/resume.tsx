@@ -7,7 +7,6 @@ export const DATA = {
   url: "https://dillion.io",//Temporary URL
   location: "Fountain Valley, CA",
   locationLink: "https://www.google.com/maps/place/Fountain+Valley,+CA",
-  description:"| Computer Engineer | Software Engineer | Mobile phone technician | Tech Enthusiast | Lifelong learner |",
   summary: "I wanted to be an inventor to create and be part of something big. Those ideas influenced me to get a bachelor's degree in Computer engineering from California state university. My experience spans from playing with legos as a kid to working with brilliant minds on nuclear power systems. I've programmed microcontrollers for professors, worked with VBScript in assisting tech writers, and creating Python scripts for SWE managers.",
   skills: [
     "React",
