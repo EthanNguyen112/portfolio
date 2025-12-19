@@ -3,8 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-
-
 const roles = [
   "Computer Engineer",
   "Software Engineer",
@@ -13,7 +11,7 @@ const roles = [
   "Lifelong Learner",
 ];
 
-export default function roleCarousel({ delay = 0 }) {
+export default function BlurFadeRoles({ delay = 0 }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -46,9 +44,9 @@ export default function roleCarousel({ delay = 0 }) {
             delay,
             ease: "easeOut",
           }}
-          className="md:text-xl font-medium text-muted-foreground"
-        >
-          | {roles[index]} |
+          className="md:text-xl font-medium text-black dark:text-white"
+          >
+          {roles[index]}
         </motion.p>
       </AnimatePresence>
     </div>
