@@ -19,21 +19,14 @@ export default function Page() {
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`Hello, My name is  `}
+              delay={BLUR_FADE_DELAY}
+              className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+              yOffset={8}
+              text={`Hello, I'm ${DATA.name.split(" ")[0]}`}
               />
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`${DATA.name} `}
-              />
-              <div className="max-w-[600px] md:text-xl">
-                <RoleCarousel 
-                delay={BLUR_FADE_DELAY} 
-                />
+              <div className="md:text-xl font-medium text-black dark:text-white flex items-center gap-2">
+                <span>Inspiring to be a</span>
+                <RoleCarousel delay={BLUR_FADE_DELAY} />
               </div>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
