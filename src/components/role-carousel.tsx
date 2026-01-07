@@ -23,32 +23,22 @@ export default function BlurFadeRoles({ delay = 0 }) {
   }, []);
 
   return (
-    <div className="h-8 md:h-10 overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.p
-          key={index}
-          initial={{
-            opacity: 0,
-            filter: "blur(6px)",
-          }}
-          animate={{
-            opacity: 1,
-            filter: "blur(0px)",
-          }}
-          exit={{
-            opacity: 0,
-            filter: "blur(6px)",
-          }}
-          transition={{
-            duration: 0.45,
-            delay,
-            ease: "easeOut",
-          }}
-          className="md:text-xl font-medium text-black dark:text-white"
-          >
-          {roles[index]}
-        </motion.p>
-      </AnimatePresence>
-    </div>
+    <AnimatePresence mode="wait">
+      <motion.span
+        key={index}
+        initial={{ opacity: 0, filter: "blur(6px)", y: 0 }}
+        animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+        exit={{ opacity: 0, filter: "blur(6px)", y: 0 }}
+        transition={{
+          duration: 0.45,
+          delay,
+          ease: "easeOut",
+        }}
+        className="inline-flex leading-none align-baseline"
+        >
+        {roles[index]}
+      </motion.span>
+
+    </AnimatePresence>
   );
 }

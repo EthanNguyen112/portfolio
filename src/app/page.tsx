@@ -5,7 +5,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
-import RoleCarousel from "@/components/role-carousel";
+import BlurFadeRoles from "@/components/role-carousel";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -24,11 +24,12 @@ export default function Page() {
               yOffset={8}
               text={`Hello, I'm ${DATA.name.split(" ")[0]}`}
               />
-              <div className="md:text-xl font-medium text-black dark:text-white flex items-center gap-2">
-                <span>Inspiring to be a</span>
-                <RoleCarousel delay={BLUR_FADE_DELAY} />
+              <div className="md:text-xl font-medium text-black dark:text-white flex items-baseline gap-1 leading-none">
+                <BlurFadeText text="Inspiring" delay={BLUR_FADE_DELAY} />
+                <BlurFadeRoles delay={BLUR_FADE_DELAY} />
               </div>
             </div>
+
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
