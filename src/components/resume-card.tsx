@@ -44,7 +44,7 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
+      <Card className="flex border-1 p-2 transition-all duration-300 ease-out hover:scale-[1.015] hover:shadow-lg dark:hover:shadow-none">
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
@@ -88,20 +88,29 @@ export const ResumeCard = ({
           </CardHeader>
           {description && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, height: 0, y: -4 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
-
                 height: isExpanded ? "auto" : 0,
+                y: isExpanded ? 0 : -4,
               }}
+
               transition={{
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
+                height: {
+                  duration: 0.7,
+                  ease: [0.16, 1, 0.3, 1],
+                },
+                opacity: {
+                  duration: 0.25,
+                  delay: isExpanded ? 0.15 : 0,
+                  ease: "easeOut",
+                },
               }}
-              className="mt-2 text-xs sm:text-sm"
+              className="mt-2 text-xs sm:text-sm overflow-hidden"
             >
               {description}
             </motion.div>
+
           )}
         </div>
       </Card>
