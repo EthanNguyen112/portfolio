@@ -148,3 +148,6 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
+.perspective-1200 {
+  perspective: 1200px;
+}

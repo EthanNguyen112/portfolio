@@ -41,11 +41,21 @@ export function ProjectCard({
   className,
 }: Props) {
   return (
-    <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
-    >
+
+  <Card
+    className="
+      flex flex-col
+      w-[320px]
+      overflow-hidden
+      border
+      transition-shadow
+      duration-300
+      ease-out
+      h-full
+      bg-background
+    "
+  >
+
       <Link
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
