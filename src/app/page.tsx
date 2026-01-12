@@ -117,9 +117,9 @@ export default function Page() {
 
 
         <section id="projects">
-          <div className="space-y-12 w-full py-12">
+          <div className=" w-full py-12">
             <BlurFade delay={BLUR_FADE_DELAY * 11}>
-              <div className="flex flex-col items-center text-center space-y-4">
+              <div className="flex flex-col items-center text-center space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Projects worked on
                 </h2>
@@ -133,14 +133,11 @@ export default function Page() {
               <div
                 className="relative w-full"
                 style={{
-                  transform: "translateZ(0)",
-                  transformStyle: "preserve-3d",
                   perspective: "1200px",
                 }}
               >
-                <OrbitalProjectCarousel projects={DATA.projects} />
+                <OrbitalProjectCarousel projects={[...DATA.projects]} />
               </div>
-
             </div>
           </div>
         </section>
