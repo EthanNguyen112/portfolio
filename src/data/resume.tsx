@@ -12,7 +12,7 @@ export const DATA = {
     "React",
     "Next.js",
     "Typescript",
-    "Node.js",
+    "Node.j s",
     "Python",
     "C++",
     "Verilog",
@@ -104,6 +104,33 @@ export const DATA = {
       image: "",
       video:
         "",//"https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+    },
+    {
+      title: "IOSAppCounter",
+      href: "https://github.com/EthanNguyen112/IOSAppCounter",
+      //dates: "June 2023 - Present",
+      active: true,
+      description:
+        "An automation for the IOS shortcut app to show how many times an application has been open and how long it's been used. Purpose the actively keep the user aware of their screen time, productivity tracking, and app usage awareness.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+        "Stripe",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Bluetooth_Controlled_Robot_Car",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",//"https://cdn.magicui.design/bento-grid.mp4",
     },
     {
       title: "Bluetooth Robot Car",
