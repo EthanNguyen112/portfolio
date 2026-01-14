@@ -5,6 +5,7 @@ import type { ComponentProps } from "react";
 import { useState } from "react";
 import { ProjectCard } from "@/components/project-card";
 
+
 interface OrbitalProjectCarouselProps {
   projects: ComponentProps<typeof ProjectCard>[];
 }
@@ -42,7 +43,7 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
           return (
             <motion.div
               key={project.title}
-              className="absolute bg-white dark:bg-black rounded-lg shadow-lg h-[200px]"
+              className="absolute bg-white dark:bg-black rounded-lg shadow-lg "
               animate={{
                 transform: `
                   rotateY(${angle}deg)

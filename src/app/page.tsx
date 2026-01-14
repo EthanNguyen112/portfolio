@@ -9,6 +9,7 @@ import { OrbitalProjectCarousel } from "@/components/project-Orbital";
 import BlurFadeRoles from "@/components/role-carousel";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { ProjectSection } from "@/components/projectSelection";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -136,7 +137,8 @@ export default function Page() {
                   perspective: "1200px",
                 }}
               >
-                <OrbitalProjectCarousel projects={[...DATA.projects]} />
+                <ProjectSection />
+
               </div>
             </div>
           </div>
