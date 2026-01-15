@@ -39,14 +39,18 @@ export function ProjectCard({
     <Card
       role="link"
       tabIndex={0}
-      onClick={() => href && router.push(href)}
+      onClick={() => href && window.open(href, "_blank", "noopener,noreferrer")}
       onKeyDown={(e) => {
-        if (e.key === "Enter" && href) router.push(href);
+        if (e.key === "Enter" && href) {
+          window.open(href, "_blank", "noopener,noreferrer");
+        }
       }}
+
       className="
         relative
         flex flex-col
-        w-[320px]
+        w-full
+        max-w-[320px]
         h-full
         cursor-pointer
         border-1

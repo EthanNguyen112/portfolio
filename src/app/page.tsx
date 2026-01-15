@@ -128,7 +128,7 @@ export default function Page() {
                   I&apos;ve worked on a variety of projects, from iPhone shortcuts to remote controlled cars.
                 </p>
               </div>
-            </BlurFade>
+            
 
             <div className="relative isolate">
               <div
@@ -138,13 +138,37 @@ export default function Page() {
                 }}
               >
                 <ProjectSection />
-
+              
               </div>
             </div>
+          </BlurFade>
           </div>
+
         </section>
 
-      {/* Hackathons section removed */}
+      {/* Latest Resume */}
+      <section id="Resume">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+        <BlurFade delay={BLUR_FADE_DELAY * 12}>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+            Latest Resume
+            </h2>
+        
+        
+          <Link
+            href="https://www.overleaf.com/read/khftbfqdwpsg#681339"
+            className="text-blue-800 hover:underline"
+          >
+            View Resume 2026
+          </Link>
+          </BlurFade>
+        </div>
+      </section>
+
+
+
+
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

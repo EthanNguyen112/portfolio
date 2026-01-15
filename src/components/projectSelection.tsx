@@ -20,7 +20,7 @@ export function ProjectSection() {
           onClick={() =>
             setView((v) => (v === "orbit" ? "grid" : "orbit"))
           }
-          className="rounded-full border px-4 py-2 text-sm hover:bg-muted transition"
+          className="rounded-full bg-white border px-4 py-2 text-sm hover:bg-muted transition"
         >
           {view === "orbit" ? "Grid View" : "Orbit View"}
         </button>

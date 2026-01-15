@@ -129,6 +129,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
+      
       image: "",
       video: "",//"https://cdn.magicui.design/bento-grid.mp4",
     },
@@ -139,6 +140,33 @@ export const DATA = {
       active: true,
       description:
         "A wireless robot car built using the microcontroller and Bluetooth module, controlled from a laptop or smartphone via UART communication. Demonstrates embedded systems, Bluetooth configuration, and PWM-based motor control.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+        "Stripe",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Bluetooth_Controlled_Robot_Car",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",//"https://cdn.magicui.design/bento-grid.mp4",
+    },
+    {
+      title: "Traffic Light Controller",
+      href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Traffic_Light_Controller",
+      //dates: "June 2023 - Present",
+      active: true,
+      description:
+        "A traffic light control system developed using a microcontroller programed via C. Simulates a real-world intersection with North-South, East-West vehicle lanes, and pedestrian crossing functionality",
       technologies: [
         "Next.js",
         "Typescript",
@@ -199,7 +227,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/EthanNguyen112/Arduino-iot-webvideo",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
