@@ -158,10 +158,15 @@ export default function Page() {
           <Link
             href="https://www.overleaf.com/read/khftbfqdwpsg#681339"
             className="text-blue-800 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             View Resume 2026
           </Link>
-          </BlurFade>
+            <h2 className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            VIA OVERLEAF
+          </h2>
+        </BlurFade>
         </div>
       </section>
 
