@@ -5,6 +5,7 @@ export const DATA = {
   name: "Ethan Nguyen",
   initials: "EN",
   url: "https://dillion.io",//Temporary URL
+  avatarUrl: "/me.jpg",
   location: "Fountain Valley, CA",
   locationLink: "https://www.google.com/maps/place/Fountain+Valley,+CA",
   summary: "I wanted to be an inventor to create and be part of something big. Those ideas influenced me to get a bachelor's degree in Computer engineering from California state university. My experience spans from playing with legos as a kid to working with brilliant minds on nuclear power systems. I've programmed microcontrollers for professors, worked with VBScript in assisting tech writers, and creating Python scripts for SWE managers.",
@@ -58,7 +59,7 @@ export const DATA = {
       badges: [],
       location: "Anheim, CA",
       title: "Software Engineer Intern",
-      logoUrl: "/atomic.png",
+      logoUrl: "/L3harris.png",
       start: "June 2019",
       end: "january 2021",
       description:
@@ -70,7 +71,7 @@ export const DATA = {
       school: "California State University, Long Beach",
       href: "https://www.csulb.edu/",
       degree: "Bachelor of Science, Computer Engineering",
-      logoUrl: "/ib.png",
+      logoUrl: "/LB.Jpg",
       //start: "2016",
       end: "2022",
       description:
@@ -101,7 +102,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/EmbeddedWeatherQuest.png",
       video:
         "",//"https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
@@ -157,7 +158,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/RC.png",
       video: "",//"https://cdn.magicui.design/bento-grid.mp4",
     },
     {
@@ -184,7 +185,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/trafficLightController.png",
       video: "",//"https://cdn.magicui.design/bento-grid.mp4",
     },
     {
@@ -208,7 +209,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/serialTerminalCalculator.png",
       video: "",//"https://cdn.llm.report/openai-demo.mp4",
     },
     {
