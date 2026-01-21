@@ -83,7 +83,7 @@ export const DATA = {
     {
       title: "Embedded Weather Quest",
       href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Embedded_Weather_Quest",
-      //dates: "Jan 2024 - Feb 2024",
+      //dates:
       active: true,
       description:
         "This project demonstrates how to build an IoT-enabled embedded weather application",
@@ -104,12 +104,12 @@ export const DATA = {
       ],
       image: "/projects/EmbeddedWeatherQuest.png",
       video:
-        "",//"https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "",
     },
     {
       title: "IOSAppCounter",
       href: "https://github.com/EthanNguyen112/IOSAppCounter",
-      //dates: "June 2023 - Present",
+      
       active: true,
       description:
         "An automation for the IOS shortcut app to show how many times an application has been open and how long it's been used. Purpose the actively keep the user aware of their screen time, productivity tracking, and app usage awareness.",
@@ -132,12 +132,12 @@ export const DATA = {
       ],
       
       image: "",
-      video: "",//"https://cdn.magicui.design/bento-grid.mp4",
+      video: "/projects/IOS.mp4",
     },
     {
       title: "Bluetooth Robot Car",
       href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Bluetooth_Controlled_Robot_Car",
-      //dates: "June 2023 - Present",
+     
       active: true,
       description:
         "A wireless robot car built using the microcontroller and Bluetooth module, controlled from a laptop or smartphone via UART communication. Demonstrates embedded systems, Bluetooth configuration, and PWM-based motor control.",
@@ -159,12 +159,12 @@ export const DATA = {
         },
       ],
       image: "/projects/RC.png",
-      video: "",//"https://cdn.magicui.design/bento-grid.mp4",
+      video: "",
     },
     {
       title: "Traffic Light Controller",
       href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Traffic_Light_Controller",
-      //dates: "June 2023 - Present",
+      
       active: true,
       description:
         "A traffic light control system developed using a microcontroller programed via C. Simulates a real-world intersection with North-South, East-West vehicle lanes, and pedestrian crossing functionality",
@@ -186,7 +186,7 @@ export const DATA = {
         },
       ],
       image: "/projects/trafficLightController.png",
-      video: "",//"https://cdn.magicui.design/bento-grid.mp4",
+      video: "",
     },
     {
       title: "Serial Terminal Calculator",
@@ -210,7 +210,7 @@ export const DATA = {
         },
       ],
       image: "/projects/serialTerminalCalculator.png",
-      video: "",//"https://cdn.llm.report/openai-demo.mp4",
+      video: "",
     },
     {
       title: "Arduino iot webvideo",
@@ -232,8 +232,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video:
-        "",//"https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      video: "/projects/workinprogress.mp4",
     },
     
   ],

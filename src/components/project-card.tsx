@@ -53,6 +53,7 @@ export function ProjectCard({
         max-w-[320px]
         h-full
         cursor-pointer
+        overflow-hidden
         border-1
         p-2
         transition-all
