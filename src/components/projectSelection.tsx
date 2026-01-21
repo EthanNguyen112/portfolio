@@ -12,15 +12,14 @@ export function ProjectSection() {
   return (
     <section id="projects" className="py-16 space-y-8">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between z-20 relative">
         <h2 className="text-3xl font-bold">Project View</h2>
 
         {/* Toggle Button */}
         <button
           onClick={() =>
-            setView((v) => (v === "orbit" ? "grid" : "orbit"))
-          }
-          className="rounded-full bg-white border px-4 py-2 text-sm hover:bg-muted transition"
+            setView((v) => (v === "orbit" ? "grid" : "orbit"))}
+          className="rounded-full bg-white border px-4 py-2 text-sm hover:bg-muted transition z-30 relative"
         >
           {view === "orbit" ? "Grid View" : "Orbit View"}
         </button>

@@ -14,13 +14,13 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
   const [active, setActive] = useState(0);
   const [rotation, setRotation] = useState(0);
 
-  const radius = 700;
+  const radius = 600;
   const step = 360 / projects.length;
   
   return (
-    <div className="relative h-[480px] w-full overflow-visible ">
+    <div className="relative h-[480px] w-full overflow-visible pointer-events-none">
       <motion.div
-        className="absolute inset-0 flex items-center justify-center "
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
         animate={{ rotateY: rotation }}
         transition={{
           type: "tween",
@@ -43,7 +43,7 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
           return (
             <motion.div
               key={project.title}
-              className="absolute bg-white dark:bg-black rounded-lg shadow-lg "
+              className="absolute bg-white dark:bg-black rounded-lg shadow-lg pointer-events-auto"
               animate={{
                 transform: `
                   rotateY(${angle}deg)
@@ -70,7 +70,7 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
       </motion.div>
 
       {/* Arrow buttons */}
-      <div className="absolute inset-x-0 bottom-[-64px] flex justify-center gap-6">
+      <div className="absolute inset-x-0 bottom-[-64px] flex justify-center gap-6 z-20 pointer-events-auto">
         <button
           onClick={() => {
             setActive((prev) => (prev - 1 + projects.length) % projects.length);
