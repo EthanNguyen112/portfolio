@@ -16,8 +16,9 @@ interface ResumeCardProps {
   subtitle?: string;
   href?: string;
   badges?: readonly string[];
-  period: string;
+  period?: string;
   description?: string;
+  variant?: "timeline" | "resume";
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,15 +29,17 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  variant = "timeline"
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (description) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (variant === "timeline" && description) {
       e.preventDefault();
       setIsExpanded(!isExpanded);
-    }
+    } 
   };
+
 
   return (
     <Link
@@ -73,45 +76,45 @@ export const ResumeCard = ({
                     ))}
                   </span>
                 )}
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
+                {variant === "timeline" && (
+                  <ChevronRightIcon
+                    className={cn(
+                      "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                      isExpanded ? "rotate-90" : "rotate-0"
+                    )}
+                  />
+                )}
+
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period}
+                {period && (
+                  <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+                    {period}
+                  </div>
+                )}
+
               </div>
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
-          {description && (
-            <motion.div
-              initial={{ opacity: 0, height: 0, y: -4 }}
-              animate={{
-                opacity: isExpanded ? 1 : 0,
-                height: isExpanded ? "auto" : 0,
-                y: isExpanded ? 0 : -4,
-              }}
+          {variant === "timeline" && description && (
+  <motion.div
+    initial={{ opacity: 0, height: 0, y: -4 }}
+    animate={{
+      opacity: isExpanded ? 1 : 0,
+      height: isExpanded ? "auto" : 0,
+      y: isExpanded ? 0 : -4,
+    }}
+    transition={{
+      height: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+      opacity: { duration: 0.25, delay: isExpanded ? 0.15 : 0, ease: "easeOut" },
+    }}
+    className="mt-2 text-xs sm:text-sm overflow-hidden"
+  >
+    {description}
+  </motion.div>
+)}
 
-              transition={{
-                height: {
-                  duration: 0.7,
-                  ease: [0.16, 1, 0.3, 1],
-                },
-                opacity: {
-                  duration: 0.25,
-                  delay: isExpanded ? 0.15 : 0,
-                  ease: "easeOut",
-                },
-              }}
-              className="mt-2 text-xs sm:text-sm overflow-hidden"
-            >
-              {description}
-            </motion.div>
-
-          )}
         </div>
       </Card>
     </Link>

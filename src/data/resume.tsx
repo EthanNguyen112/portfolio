@@ -235,5 +235,6 @@ export const DATA = {
       video: "/projects/workinprogress.mp4",
     },
     
+    
   ],
 } as const;

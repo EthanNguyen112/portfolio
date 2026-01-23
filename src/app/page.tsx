@@ -147,28 +147,23 @@ export default function Page() {
         </section>
 
       {/* Latest Resume */}
-      <section id="Resume">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-        <BlurFade delay={BLUR_FADE_DELAY * 12}>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-            Latest Resume
-            </h2>
-        
-        
-          <Link
-            href="https://www.overleaf.com/read/khftbfqdwpsg#681339"
-            className="text-blue-800 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Resume 2026
-          </Link>
-            <h2 className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            VIA OVERLEAF
-          </h2>
-        </BlurFade>
-        </div>
-      </section>
+      <section id="resume" className="py-16 space-y-8">
+  <h2 className="text-3xl font-bold text-center">Resume</h2>
+
+  <div className="flex justify-center">
+    <ResumeCard
+  variant="resume"
+  title="Latest Resume"
+  subtitle="Computer Engineering"
+  href="https://www.overleaf.com/read/khftbfqdwpsg#681339"
+  logoUrl="/resume-icon.png" // or your avatar/logo
+  altText="Resume"
+  description="View my most up-to-date resume hosted on Overleaf."
+/>
+
+  </div>
+</section>
+
 
 
 
