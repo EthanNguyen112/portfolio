@@ -10,6 +10,7 @@ import BlurFadeRoles from "@/components/role-carousel";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { ProjectSection } from "@/components/projectSelection";
+import { ResumePreviewCard } from "@/components/ResumePreview";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -147,26 +148,14 @@ export default function Page() {
         </section>
 
       {/* Latest Resume */}
+
       <section id="resume" className="py-16 space-y-8">
+        <BlurFade delay={BLUR_FADE_DELAY * 15}>
   <h2 className="text-3xl font-bold text-center">Resume</h2>
-
-  <div className="flex justify-center">
-    <ResumeCard
-  variant="resume"
-  title="Latest Resume"
-  subtitle="Computer Engineering"
-  href="https://www.overleaf.com/read/khftbfqdwpsg#681339"
-  logoUrl="/resume-icon.png" // or your avatar/logo
-  altText="Resume"
-  description="View my most up-to-date resume hosted on Overleaf."
-/>
-
-  </div>
+    <div className="flex justify-center"></div>
+  <ResumePreviewCard />
+  </BlurFade>
 </section>
-
-
-
-
 
 
       <section id="contact">
@@ -178,10 +167,12 @@ export default function Page() {
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               I reply fastest on my {" "}
               <Link
-                href={DATA.contact.social.GitHub.url}
+                href={DATA.contact.social.LinkedIn.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-800 hover:underline"
               >
-                Email
+                LinkedIn
               </Link>{" "}
               and I&apos;ll respond whenever I can. No
               soliciting.

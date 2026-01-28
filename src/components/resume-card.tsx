@@ -44,9 +44,12 @@ export const ResumeCard = ({
   return (
     <Link
       href={href || "#"}
+      target={variant === "resume" ? "_blank" : undefined}
+      rel={variant === "resume" ? "noopener noreferrer" : undefined}
       className="block cursor-pointer"
       onClick={handleClick}
     >
+
       <Card className="flex border-1 p-2 transition-all duration-300 ease-out hover:scale-[1.015] hover:shadow-lg dark:hover:shadow-none">
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
