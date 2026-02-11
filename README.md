@@ -73,12 +73,12 @@ Scaled and centered rendering for visual balance
 
 Install dependencies:
 
-npm install
+pnpm install
 
 
 Start development server:
 
-npm run dev
+pnpm run dev
 
 
 Open:
