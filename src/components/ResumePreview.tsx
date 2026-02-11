@@ -13,7 +13,22 @@ export function ResumePreviewCard() {
           rel="noopener noreferrer"
           className="block"
         >
-          <div className="relative mx-auto aspect-[8.5/11] max-h-[100vh] overflow-hidden rounded-xl border bg-white shadow-md transition hover:shadow-lg">
+          <div className="
+            relative 
+            mx-auto 
+            w-full 
+            h-[70vh] 
+            sm:aspect-[8.5/11] 
+            sm:h-auto 
+            overflow-hidden 
+            rounded-xl 
+            border 
+            bg-white 
+            shadow-md 
+            transition 
+            hover:shadow-lg
+          ">
+
             <iframe
               src="/Resume/Nguyen_Ethan_Resume_2026.pdf#view=FitV&toolbar=0&navpanes=0"
               className="absolute inset-0 h-full w-full pointer-events-none"
