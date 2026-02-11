@@ -1,9 +1,9 @@
-## Ethan Nguyen – Portfolio
+# Ethan Nguyen – Portfolio
 This is a personal engineering portfolio built with Next.js and TypeScript to showcase projects, work experience, and technical capabilities through interactive UI patterns and performant frontend architecture.
 
 Live site:
 
-## Overview
+# Overview
 This portfolio emphasizes:
 
 Interactive 3D project visualization
@@ -14,7 +14,7 @@ Responsive, accessible layout design
 
 The primary goal was to move beyond a static project list and experiment with spatial UI representation while maintaining performance and maintainability.
 
-## Technical Stack
+### Technical Stack
 Framework
 Next.js (App Router)
 Language
@@ -28,8 +28,8 @@ Framer Motion
 Icons
 Lucide React
 
-## Core Features
-# 1. 3D Orbital Project Carousel
+# Core Features
+## 1. 3D Orbital Project Carousel
 Projects are arranged in 3D space using CSS transforms and animated with Framer Motion.
 Each card is positioned using:
 
@@ -52,7 +52,7 @@ scale: 0.85 + depth * 0.15
 
 This provides spatial clarity while keeping the active card visually prioritized.
 
-# 2. Grid / Orbit View Toggle
+## 2. Grid / Orbit View Toggle
 
 A layout toggle allows switching between:
 
@@ -60,7 +60,7 @@ A layout toggle allows switching between:
 
 Switching is animated using AnimatePresence with controlled entry/exit transitions to avoid layout thrashing and unintended click propagation.
 
-# 3. Resume Preview Integration
+## 3. Resume Preview Integration
 
 The resume section includes:
 
@@ -85,7 +85,7 @@ Open:
 
 http://localhost:3000
 
-## Contact
+# Contact
 
 LinkedIn: https://www.linkedin.com/in/ethan-nguyen112/
 
