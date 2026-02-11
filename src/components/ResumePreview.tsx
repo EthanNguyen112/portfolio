@@ -8,14 +8,14 @@ export function ResumePreviewCard() {
       <div className="w-full max-w-3xl space-y-6">
         {/* PDF Preview */}
         <a
-          href="/resume/Nguyen_Ethan_Resume_2026.pdf"
+          href="/Resume/Nguyen_Ethan_Resume_2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="block"
         >
           <div className="relative mx-auto aspect-[8.5/11] max-h-[100vh] overflow-hidden rounded-xl border bg-white shadow-md transition hover:shadow-lg">
             <iframe
-              src="/resume/Nguyen_Ethan_Resume_2026.pdf#view=FitV&toolbar=0&navpanes=0"
+              src="/Resume/Nguyen_Ethan_Resume_2026.pdf#view=FitV&toolbar=0&navpanes=0"
               className="absolute inset-0 h-full w-full pointer-events-none"
             />
           </div>

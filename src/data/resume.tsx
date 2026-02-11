@@ -59,7 +59,7 @@ export const DATA = {
       badges: [],
       location: "Anheim, CA",
       title: "Software Engineer Intern",
-      logoUrl: "/L3harris.png",
+      logoUrl: "/l3harris.png",
       start: "June 2019",
       end: "january 2021",
       description:
@@ -71,7 +71,7 @@ export const DATA = {
       school: "California State University, Long Beach",
       href: "https://www.csulb.edu/",
       degree: "Bachelor of Science, Computer Engineering",
-      logoUrl: "/LB.Jpg",
+      logoUrl: "/LB.jpg",
       //start: "2016",
       end: "2022",
       description:
@@ -102,7 +102,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/projects/EmbeddedWeatherQuest.png",
+      image: "/projects/EmbeddedWeatherQuest.PNG",
       video:
         "",
     },
@@ -158,7 +158,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/projects/RC.png",
+      image: "/projects/RC.PNG",
       video: "",
     },
     {
@@ -185,7 +185,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/projects/trafficLightController.png",
+      image: "/projects/trafficLightController.PNG",
       video: "",
     },
     {
