@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Ethan Nguyen",
   initials: "EN",
-  url: "https://dillion.io",//Temporary URL
+  url: "https://EthanNguyen112.io",//Temporary URL
   avatarUrl: "/me.jpg",
   location: "Fountain Valley, CA",
   locationLink: "https://www.google.com/maps/place/Fountain+Valley,+CA",
