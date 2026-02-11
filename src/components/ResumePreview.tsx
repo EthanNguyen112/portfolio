@@ -1,36 +1,34 @@
 "use client";
 
+import Image from "next/image";
 import { ResumeCard } from "@/components/resume-card";
 
 export function ResumePreviewCard() {
   return (
     <div className="flex justify-center">
-      <div className="w-full max-w-3xl space-y-6">
-        {/* PDF Preview */}
+      <div className="w-full max-w-3xl space-y-8">
+        
+        {/* Resume Preview Image */}
         <a
           href="/Resume/Nguyen_Ethan_Resume_2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="block"
+          className="block group"
         >
-          <div className="
-              relative 
-              mx-auto 
-              w-full 
-              max-w-3xl
-              overflow-hidden 
-              rounded-xl 
-              border 
-              bg-white 
-              shadow-md 
-              transition 
-              hover:shadow-lg
-            ">
-
-            <iframe
-              src="/Resume/Nguyen_Ethan_Resume_2026.pdf#view=FitV&toolbar=0&navpanes=0"
-              className="w-full h-[85vh] rounded-xl border shadow-md"
+          <div className="relative overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 group-hover:shadow-lg">
+            
+            <Image
+              src="/Resume/Nguyen_Ethan_Resume_2026.png"
+              alt="Ethan Nguyen Resume Preview"
+              width={1200}
+              height={1550}
+              className="w-full h-auto object-contain"
+              priority
             />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition" />
+
           </div>
         </a>
 
@@ -38,13 +36,14 @@ export function ResumePreviewCard() {
         <ResumeCard
           variant="resume"
           title="Latest Resume"
-          subtitle="Click here for online LaTeX editor (Via Overleaf)"
+          subtitle="PDF Version — Updated 2026"
           logoUrl="/me.jpg"
           altText="Resume"
-          href="https://www.overleaf.com/read/khftbfqdwpsg#681339"
-          description="Click to view or download the full resume"
+          href="/Resume/Nguyen_Ethan_Resume_2026.pdf"
+          description="Download full PDF resume"
           period=""
         />
+
       </div>
     </div>
   );
