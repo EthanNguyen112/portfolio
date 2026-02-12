@@ -14,12 +14,12 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
   const [active, setActive] = useState(0);
   const [rotation, setRotation] = useState(0);
 
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const radius = isMobile ? 250 : 600;
+  
+  const radius = 450;
   const step = 360 / projects.length;
   
   return (
-    <div className="relative h-[480px] w-full overflow-visible isolate pointer-events-none">
+    <div className="relative h-[480px] w-full isolate pointer-events-none [perspective:2000px]">
       <motion.div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         animate={{ rotateY: rotation }}
@@ -51,7 +51,7 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
                   translateZ(${radius}px)
                   rotateY(${-(angle + parentRotation)}deg)
                 `,
-                opacity: 0.35 + depth * 0.65,
+                opacity: 0.55 + depth * 0.65,
                 scale: 0.85 + depth * 0.15,
               }}
               transition={{
