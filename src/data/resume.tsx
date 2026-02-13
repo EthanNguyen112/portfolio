@@ -112,7 +112,7 @@ export const DATA = {
       
       active: true,
       description:
-        "An automation for the IOS shortcut app to show how many times an application has been open and how long it's been used. Purpose the actively keep the user aware of their screen time, productivity tracking, and app usage awareness.",
+        "An automation for the IOS shortcut app to show how many times an application has been open and how long it's been used. The purpose is to actively keep the user aware of their screen time, productivity tracking, and app usage awareness.",
       technologies: [
         "Next.js",
         "Typescript",
