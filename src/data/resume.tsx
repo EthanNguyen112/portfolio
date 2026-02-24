@@ -54,6 +54,18 @@ export const DATA = {
 
   work: [
     {
+      company: "MuseumSoft",
+      href: "https://museumsoft.com/",
+      badges: [],
+      location: "Remote",
+      title: "SaaS Platform for Museum Management",
+      logoUrl: "/l3harris.png",
+      start: "july 2025",
+      end: "December 2025",
+      description:
+        "Engineered and maintained full-stack features across ticketing, CRM, membership management, and event scheduling platforms. Designed and implemented RESTful APIs using NestJS, Prisma, and PostgreSQL with comprehensive Swagger documentation to support scalable and maintainable backend services. Developed responsive frontend pages and reusable UI components using Next.js, shadcn/ui, and Tailwind CSS, ensuring consistency across the application. Implemented secure authentication and authorization workflows using JWT with refresh token rotation and role-based access control (RBAC). Designed and deployed a signed-URL file upload pipeline integrated with Google Cloud Storage to enable secure, direct-to-cloud asset uploads while minimizing backend load.",
+    },
+    {
       company: "L3Harris Power Pargon Inc",
       href: "https://www.l3harris.com/",
       badges: [],
