@@ -59,7 +59,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "SaaS Platform for Museum Management",
-      logoUrl: "/l3harris.png",
+      logoUrl: "/MuseumSoft.png",
       start: "july 2025",
       end: "December 2025",
       description:
