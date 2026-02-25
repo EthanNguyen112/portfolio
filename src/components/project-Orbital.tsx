@@ -15,11 +15,11 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
   const [rotation, setRotation] = useState(0);
 
   
-  const radius = 450;
+  const radius = 350;
   const step = 360 / projects.length;
   
   return (
-    <div className="relative h-[480px] w-full isolate pointer-events-none [perspective:2000px]">
+    <div className="relative h-[480px] w-full isolate pointer-events-none [perspective:1000px]">
       <motion.div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         animate={{ rotateY: rotation }}
