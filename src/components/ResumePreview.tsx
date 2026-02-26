@@ -15,7 +15,7 @@ export function ResumePreviewCard() {
           rel="noopener noreferrer"
           className="block group"
         >
-          <div className="relative overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 group-hover:shadow-lg">
+          <div className="relative overflow-visible rounded-xl border bg-white shadow-sm transition-all duration-300 group-hover:shadow-lg">
             
             <Image
               src="/Resume/Nguyen_Ethan_Resume_2026.png"

@@ -48,7 +48,7 @@ export function ProjectCard({
 
       className="
         relative
-        overflow-hidden
+        overflow-visible
         flex flex-col
         w-full
         max-w-[320px]

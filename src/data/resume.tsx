@@ -60,7 +60,7 @@ export const DATA = {
       location: "Remote",
       title: "SaaS Platform for Museum Management",
       logoUrl: "/MuseumSoft.png",
-      start: "july 2025",
+      start: "July 2025",
       end: "December 2025",
       description:
         "Engineered and maintained full-stack features across ticketing, CRM, membership management, and event scheduling platforms. Designed and implemented RESTful APIs using NestJS, Prisma, and PostgreSQL with comprehensive Swagger documentation to support scalable and maintainable backend services. Developed responsive frontend pages and reusable UI components using Next.js, shadcn/ui, and Tailwind CSS, ensuring consistency across the application. Implemented secure authentication and authorization workflows using JWT with refresh token rotation and role-based access control (RBAC). Designed and deployed a signed-URL file upload pipeline integrated with Google Cloud Storage to enable secure, direct-to-cloud asset uploads while minimizing backend load.",
@@ -98,7 +98,7 @@ export const DATA = {
       //dates:
       active: true,
       description:
-        "This project demonstrates how to build an IoT-enabled embedded weather application",
+        "This project demonstrates how to build an IoT-enabled embedded weather application.",
       technologies: [
         "C",
         "APIs",
@@ -179,7 +179,7 @@ export const DATA = {
       
       active: true,
       description:
-        "A traffic light control system developed using a microcontroller programed via C. Simulates a real-world intersection with North-South, East-West vehicle lanes, and pedestrian crossing functionality",
+        "A traffic light control system developed using a microcontroller programed via C. Simulates a real-world intersection with North-South, East-West vehicle lanes, and pedestrian crossing functionality.",
       technologies: [
         "Next.js",
         "Typescript",

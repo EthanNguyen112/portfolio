@@ -71,6 +71,9 @@
     * {
       @apply border-border;
     }
+    html, body {
+      overflow-x: clip;
+    }
     body {
       background: linear-gradient(to bottom,#ffffff, #4f46e5);
       background-attachment: fixed;
