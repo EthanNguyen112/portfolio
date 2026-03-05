@@ -225,12 +225,12 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Arduino iot webvideo",
-      href: "https://github.com/EthanNguyen112/Arduino-iot-webvideo",
+      title: "Distributed IoT Vision System",
+      href: "https://github.com/EthanNguyen112/IoT_Vision_System",
       dates: "In-progress",
       active: true,
       description:
-        "A doorbell with a camera linking to different devices will be using autodesk's hobbist circuit maker, fusion 360.",
+        "This project implements a distributed real-time IoT vision system using an ESP32-S3 with an OV2640 for edge-based image acquisition and MJPEG streaming over WiFi.",
       technologies: [
         "Arduino uno wifi",
         "LCD screen",
@@ -239,7 +239,7 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://github.com/EthanNguyen112/Arduino-iot-webvideo",
+          href: "https://github.com/EthanNguyen112/IoT_Vision_System",
           icon: <Icons.github className="size-3" />,
         },
       ],
