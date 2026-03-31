@@ -9,16 +9,19 @@ export const DATA = {
   location: "Fountain Valley, CA",
   locationLink: "https://www.google.com/maps/place/Fountain+Valley,+CA",
   summary: "I wanted to be an inventor to create and be part of something big. Those ideas influenced me to get a bachelor's degree in Computer engineering from California state university. My experience spans from playing with legos as a kid to working with brilliant minds on nuclear power systems. I've programmed microcontrollers for professors, worked with VBScript in assisting tech writers, and creating Python scripts for SWE managers.",
-  skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.j s",
-    "Python",
-    "C++",
-    "Verilog",
-    "Bash",
-    "VBscript"
+skills: [
+    {
+      category: "Embedded & Hardware",
+      items: ["C", "C++", "Verilog", "Vivado", "Arduino IDE"],
+    },
+    {
+      category: "Web & Back-End",
+      items: ["Python", "TypeScript", "Node.js", "React", "Next.js", "Tailwind", "Prisma", "PostgreSQL"],
+    },
+    {
+      category: "Tools & Platforms",
+      items: ["Git", "Jira", "Bitbucket", "Confluence", "VBScript", "Visio", "Bash", "GCP"],
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
