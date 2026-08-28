@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { OrbitalProjectCarousel } from "@/components/project-Orbital";
 import { GridProjectLayout } from "@/components/project_grid";
 import { DATA } from "@/data/resume";

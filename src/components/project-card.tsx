@@ -10,7 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import Markdown from "react-markdown";
 
 interface Props {
   title: string;
@@ -91,9 +90,9 @@ export function ProjectCard({
       <CardHeader className="px-2">
         <CardTitle className="text-base">{title}</CardTitle>
         {dates && <time className="text-xs">{dates}</time>}
-        <Markdown className="prose text-xs text-muted-foreground dark:prose-invert">
+        <p className="text-xs text-muted-foreground">
           {description}
-        </Markdown>
+        </p>
       </CardHeader>
 
       {/* Tags */}

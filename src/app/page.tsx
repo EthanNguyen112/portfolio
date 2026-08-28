@@ -8,7 +8,6 @@ import { DATA } from "@/data/resume";
 import { OrbitalProjectCarousel } from "@/components/project-Orbital";
 import BlurFadeRoles from "@/components/role-carousel";
 import Link from "next/link";
-import Markdown from "react-markdown";
 import { ProjectSection } from "@/components/projectSelection";
 import { ResumePreviewCard } from "@/components/ResumePreview";
 
@@ -47,9 +46,9 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <p className="max-w-full text-pretty font-sans text-sm text-muted-foreground">
             {DATA.summary}
-          </Markdown>
+          </p>
         </BlurFade>
       </section>
       <section id="work">
