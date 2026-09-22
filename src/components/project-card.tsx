@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -20,6 +21,7 @@ interface Props {
   image?: string;
   video?: string;
   links?: Array<{ href: string; icon: React.ReactNode; type: string }>;
+  isActive?: boolean;
 }
 
 export function ProjectCard({
@@ -31,8 +33,22 @@ export function ProjectCard({
   image,
   video,
   links,
+  isActive = true,
 }: Props) {
   const router = useRouter();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    if (isActive) {
+      el.play().catch(() => {
+        // autoplay can be blocked before user interaction — safe to ignore
+      });
+    } else {
+      el.pause();
+    }
+  }, [isActive]);
 
   return (
     <Card
@@ -50,7 +66,6 @@ export function ProjectCard({
         overflow-visible
         flex flex-col
         w-full
-        max-w-[320px]
         h-full
         cursor-pointer
         border-1
@@ -67,11 +82,12 @@ export function ProjectCard({
       {/* Media */}
       {video && (
         <video
+          ref={videoRef}
           src={video}
-          autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
           className="pointer-events-none h-40 w-full object-cover"
         />
       )}
@@ -82,6 +98,7 @@ export function ProjectCard({
           alt={title}
           width={500}
           height={300}
+          sizes="(max-width: 640px) 90vw, 320px"
           className="h-40 w-full object-cover"
         />
       )}

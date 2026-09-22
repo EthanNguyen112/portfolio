@@ -15,21 +15,31 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
   const [radius, setRadius] = useState(280);
 
   useEffect(() => {
-  const updateRadius = () => {
-    const width = window.innerWidth;
+    const updateRadius = () => {
+      const width = window.innerWidth;
+      const cardWidth = 320;
+      const maxSafeRadius = (width / 2) - (cardWidth / 2) - 24;
+      setRadius(Math.max(140, Math.min(maxSafeRadius, 280)));
+    };
 
-    const cardWidth = 320;
-    const maxSafeRadius = (width / 2) - (cardWidth / 2) - 24;
-
-    setRadius(Math.max(140, Math.min(maxSafeRadius, 280)));
-  };
-
-  updateRadius();
-  window.addEventListener("resize", updateRadius);
-  return () => window.removeEventListener("resize", updateRadius);
-}, []);
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+    return () => window.removeEventListener("resize", updateRadius);
+  }, []);
 
   const step = 360 / projects.length;
+
+  // Compute each card's angle/depth, then sort so the most forward-facing
+  // card is LAST in the DOM — later elements paint on top of earlier ones.
+  const cardsWithDepth = projects.map((project, id) => {
+    const angle = id * step;
+    const rawAngle = ((angle + rotation) % 360 + 360) % 360;
+    const normalized =  rawAngle > 180 ? 360 - rawAngle : rawAngle;
+    const depth = 1 - normalized / 180;
+    return { project, id, angle, depth };
+  });
+
+  const sortedCards = [...cardsWithDepth].sort((a, b) => a.depth - b.depth);
 
   return (
     <div className="relative w-full h-[520px] sm:h-[560px] md:h-[600px] isolate pointer-events-none [perspective:1200px] overflow-visible">
@@ -43,11 +53,8 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
         }}
         style={{ transformStyle: "preserve-3d" }}
       >
-        {projects.map((project, id) => {
-          const angle = id * step;
-          const rawAngle = (angle + rotation) % 360;
-          const normalized = Math.abs(rawAngle > 180 ? 360 - rawAngle : rawAngle);
-          const depth = 1 - normalized / 180;
+        {sortedCards.map(({ project, id, angle, depth }) => {
+          const isActive = id === active;
 
           return (
             <motion.div
@@ -71,7 +78,7 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
                 transformStyle: "preserve-3d",
               }}
             >
-              <ProjectCard {...project} />
+              <ProjectCard {...project} isActive={isActive} />
             </motion.div>
           );
         })}

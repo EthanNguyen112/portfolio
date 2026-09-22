@@ -133,32 +133,33 @@ export default function Page() {
           id="projects"
           className="py-16 space-y-8"
         >
-          <div className="mx-auto max-w-2xl px-6">
-            <BlurFade delay={BLUR_FADE_DELAY * 11}>
-              <div className="flex flex-col items-center text-center space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Projects worked on
-                </h2>
-                <p className="text-muted-foreground md:text-xl">
-                  I&apos;ve worked on a variety of projects, from iPhone shortcuts to remote controlled cars.
-                </p>
-              </div>
-            
-
-            <div className="relative isolate">
-              <div
-                className="relative w-full"
-                style={{
-                  perspective: "1200px",
-                }}
-              >
-                <ProjectSection />
+          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+            <div className="mx-auto max-w-2xl lg:max-w-4xl xl:max-w-6xl px-6">
+              <BlurFade delay={BLUR_FADE_DELAY * 11}>
+                <div className="flex flex-col items-center text-center space-y-2">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                    Projects worked on
+                  </h2>
+                  <p className="text-muted-foreground md:text-xl">
+                    I&apos;ve worked on a variety of projects, from iPhone shortcuts to remote controlled cars.
+                  </p>
+                </div>
               
-              </div>
-            </div>
-          </BlurFade>
-          </div>
 
+              <div className="relative isolate">
+                <div
+                  className="relative w-full"
+                  style={{
+                    perspective: "1200px",
+                  }}
+                >
+                  <ProjectSection />
+                
+                </div>
+              </div>
+            </BlurFade>
+            </div>
+          </div>
         </section>
 
       {/* Latest Resume */}
