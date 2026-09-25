@@ -22,8 +22,8 @@ export function ResumePreviewCard() {
               alt="Ethan Nguyen Resume Preview"
               width={1200}
               height={1550}
+              sizes="(max-width: 768px) 100vw, 768px"
               className="w-full h-auto object-contain"
-              priority
             />
 
             {/* Overlay */}
