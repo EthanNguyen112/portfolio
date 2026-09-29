@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -22,6 +23,7 @@ interface Props {
   video?: string;
   links?: Array<{ href: string; icon: React.ReactNode; type: string }>;
   isActive?: boolean;
+  enableTilt?: boolean;
 }
 
 export function ProjectCard({
@@ -34,6 +36,7 @@ export function ProjectCard({
   video,
   links,
   isActive = true,
+  enableTilt = true,
 }: Props) {
   const router = useRouter();
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -42,15 +45,43 @@ export function ProjectCard({
     const el = videoRef.current;
     if (!el) return;
     if (isActive) {
-      el.play().catch(() => {
-        // autoplay can be blocked before user interaction — safe to ignore
-      });
+      el.play().catch(() => {});
     } else {
       el.pause();
     }
   }, [isActive]);
 
-  return (
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [8, -8]), {
+    stiffness: 300,
+    damping: 25,
+  });
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-8, 8]), {
+    stiffness: 300,
+    damping: 25,
+  });
+
+  const rectRef = useRef<DOMRect | null>(null);
+
+  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+    rectRef.current = e.currentTarget.getBoundingClientRect();
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = rectRef.current;
+    if (!rect) return;
+    mouseX.set((e.clientX - rect.left) / rect.width - 0.5);
+    mouseY.set((e.clientY - rect.top) / rect.height - 0.5);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+    rectRef.current = null;
+  };
+
+  const cardContent = (
     <Card
       role="link"
       tabIndex={0}
@@ -60,7 +91,6 @@ export function ProjectCard({
           window.open(href, "_blank", "noopener,noreferrer");
         }
       }}
-
       className="
         relative
         overflow-visible
@@ -70,10 +100,9 @@ export function ProjectCard({
         cursor-pointer
         border-1
         p-2
-        transition-all
+        transition-shadow
         duration-300
         ease-out
-        hover:scale-[1.015]
         hover:shadow-lg
         dark:hover:shadow-none
         focus:outline-none
@@ -142,5 +171,21 @@ export function ProjectCard({
         ))}
       </CardFooter>
     </Card>
+  );
+
+  if (!enableTilt) {
+    return <div className="w-full h-full">{cardContent}</div>;
+  }
+
+  return (
+    <motion.div
+      onMouseEnter={handleMouseEnter}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{ rotateX, rotateY, transformPerspective: 800 }}
+      className="w-full h-full"
+    >
+      {cardContent}
+    </motion.div>
   );
 }

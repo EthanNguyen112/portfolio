@@ -54,7 +54,7 @@ export default function Navbar() {
 
     <Link
       href="/"
-      className="text-2xl font-bold tracking-tighter sm:text-4xl dark:text-white"
+      className="font-heading text-2xl font-bold tracking-tighter sm:text-4xl dark:text-white"
     >
       Ethan Nguyen's Portfolio
     </Link>

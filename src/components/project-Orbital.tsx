@@ -78,7 +78,7 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
                 transformStyle: "preserve-3d",
               }}
             >
-              <ProjectCard {...project} isActive={isActive} />
+              <ProjectCard {...project} isActive={isActive} enableTilt={false} />
             </motion.div>
           );
         })}

@@ -1,5 +1,6 @@
 import { ProjectCard } from "@/components/project-card";
 import type { ComponentProps } from "react";
+import BlurFade from "@/components/magicui/blur-fade";
 
 interface GridProjectLayoutProps {
   projects: ComponentProps<typeof ProjectCard>[];
@@ -17,11 +18,14 @@ export function GridProjectLayout({ projects }: GridProjectLayoutProps) {
         auto-rows-fr
       "
     >
-      {projects.map((project) => (
-        <ProjectCard
+      {projects.map((project, idx) => (
+        <BlurFade
           key={project.title}
-          {...project}
-        />
+          delay={0.1 + idx * 0.05}
+          xOffset={idx % 2 === 0 ? -24 : 24}
+        >
+          <ProjectCard {...project} />
+        </BlurFade>
       ))}
     </div>
   );

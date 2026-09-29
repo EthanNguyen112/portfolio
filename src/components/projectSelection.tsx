@@ -2,9 +2,14 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { OrbitalProjectCarousel } from "@/components/project-Orbital";
+import dynamic from "next/dynamic";
 import { GridProjectLayout } from "@/components/project_grid";
 import { DATA } from "@/data/resume";
+
+const OrbitalProjectCarousel = dynamic(
+  () => import("@/components/project-Orbital").then((m) => m.OrbitalProjectCarousel),
+  { loading: () => <div className="h-[520px] sm:h-[560px] md:h-[600px]" /> }
+);
 
 export function ProjectSection() {
   const [view, setView] = useState<"orbit" | "grid">("orbit");
@@ -13,7 +18,7 @@ export function ProjectSection() {
     <section id="projects" className="py-16 space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between z-20 relative">
-        <h2 className="text-3xl font-bold">Project View</h2>
+        <h2 className="font-heading text-3xl font-bold">Project View</h2>
 
         {/* Toggle Button */}
         <button

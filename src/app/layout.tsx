@@ -4,12 +4,18 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, Space_Grotesk as FontHeading } from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontHeading = FontHeading({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -38,7 +44,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
   verification: {
     google: "",
     yandex: "",
@@ -50,7 +55,6 @@ export const viewport = {
   initialScale: 1,
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,7 +65,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontHeading.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
