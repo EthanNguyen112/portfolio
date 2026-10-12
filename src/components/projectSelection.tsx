@@ -40,7 +40,13 @@ export function ProjectSection() {
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <OrbitalProjectCarousel projects={DATA.projects.map(p => ({ ...p, links: [...p.links] }))} />
+            <OrbitalProjectCarousel projects={DATA.projects.map(p => ({
+               ...p,
+               links: [...p.links],
+               tags: [...p.technologies],
+               }))}
+              />
+
           </motion.div>
         )}
 
@@ -52,7 +58,12 @@ export function ProjectSection() {
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <GridProjectLayout projects={DATA.projects.map(p => ({ ...p, links: [...p.links] }))} />
+            <GridProjectLayout projects={DATA.projects.map(p => ({
+               ...p,
+               links: [...p.links],
+               tags: [...p.technologies],
+               }))}
+              />
           </motion.div>
         )}
       </AnimatePresence>

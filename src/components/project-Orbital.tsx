@@ -59,7 +59,7 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
           return (
             <motion.div
               key={project.title}
-              className="absolute w-[320px] h-[320px] bg-white dark:bg-black rounded-lg shadow-lg pointer-events-auto"
+              className="absolute w-[320px] h-[365px] bg-white dark:bg-black rounded-lg shadow-lg pointer-events-auto"
               animate={{
                 transform: `
                   rotateY(${angle}deg)

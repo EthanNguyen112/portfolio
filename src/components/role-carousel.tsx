@@ -17,7 +17,7 @@ export default function BlurFadeRoles({ delay = 0 }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % roles.length);
-    }, 2200);
+    }, 3200);
 
     return () => clearInterval(interval);
   }, []);
@@ -30,7 +30,7 @@ export default function BlurFadeRoles({ delay = 0 }) {
         animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
         exit={{ opacity: 0, filter: "blur(6px)", y: 0 }}
         transition={{
-          duration: 0.45,
+          duration: 0.55,
           delay,
           ease: "easeOut",
         }}

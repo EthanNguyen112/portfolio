@@ -48,15 +48,15 @@ export default function Navbar() {
     <div className="pointer-events-none fixed inset-0 z-30">
 
       {/* TOP LEFT NAME */}
-     <div className="w-full flex items-center px-6 py-4 
+     <div className="w-full flex items-center px-6 py-3 
                   backdrop-blur-xl bg-white/50 dark:bg-black/30 
                   border-b border-black/10 dark:border-white/10">
 
     <Link
       href="/"
-      className="font-heading text-2xl font-bold tracking-tighter sm:text-4xl dark:text-white"
+      className="text-lg font-semibold tracking-tight sm:text-xl dark:text-white"
     >
-      Ethan Nguyen's Portfolio
+      Ethan Nguyen
     </Link>
   </div>
 

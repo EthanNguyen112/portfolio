@@ -5,6 +5,7 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans, Space_Grotesk as FontHeading } from "next/font/google";
+import {MotionProvider} from "@/components/motion-provider";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -71,8 +72,10 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
+            <MotionProvider>
+              {children}
+              <Navbar />
+            </MotionProvider>
           </TooltipProvider>
         </ThemeProvider>
       </body>
