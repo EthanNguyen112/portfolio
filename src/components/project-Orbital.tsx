@@ -75,7 +75,9 @@ export function OrbitalProjectCarousel({ projects }: OrbitalProjectCarouselProps
                 duration: 0.6,
               }}
               style={{
-                transformStyle: "preserve-3d",
+                 transformStyle: "flat",
+                  isolation: "isolate",
+                  zIndex: Math.round(depth * 100),
               }}
             >
               <ProjectCard {...project} isActive={isActive} enableTilt={false} />
