@@ -69,14 +69,14 @@ skills: [
         "Engineered and maintained full-stack features across ticketing, CRM, membership management, and event scheduling platforms. Designed and implemented RESTful APIs using NestJS, Prisma, and PostgreSQL with comprehensive Swagger documentation to support scalable and maintainable backend services. Developed responsive frontend pages and reusable UI components using Next.js, shadcn/ui, and Tailwind CSS, ensuring consistency across the application. Implemented secure authentication and authorization workflows using JWT with refresh token rotation and role-based access control (RBAC). Designed and deployed a signed-URL file upload pipeline integrated with Google Cloud Storage to enable secure, direct-to-cloud asset uploads while minimizing backend load.",
     },
     {
-      company: "L3Harris Power Pargon Inc",
+      company: "L3Harris Power Paragon Inc",
       href: "https://www.l3harris.com/",
       badges: [],
-      location: "Anheim, CA",
+      location: "Anaheim, CA",
       title: "Software Engineer Intern",
       logoUrl: "/l3harris.png",
       start: "June 2019",
-      end: "january 2021",
+      end: "January 2021",
       description:
         "I automated Jira tracking for more than fifty engineering tickets to eliminate manual reporting and improve project visibility for management, integrated and debugged hardware and software for nuclear power systems to strengthen data accuracy and system reliability, maintained an organized Confluence workspace with updated documentation and product architecture, and developed a GUI-based application that reduced manual documentation effort by thirty percent while ensuring consistent and compliant records.",
     }
@@ -127,21 +127,17 @@ skills: [
       
       active: true,
       description:
-        "An automation for the IOS shortcut app to show how many times an application has been open and how long it's been used. The purpose is to actively keep the user aware of their screen time, productivity tracking, and app usage awareness.",
+        "An iOS Shortcuts automation that tracks how many times chosen apps are opened and how long they're used. A pop-up notification shows your daily count and time spent, keeping screen time and app usage front of mind.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "iOS Shortcuts",
+        "Personal automations",
+        "Local file storage",
+        "Date-based reset logic",
       ],
       links: [
         {
           type: "Source",
-          href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Bluetooth_Controlled_Robot_Car",
+          href: "https://github.com/EthanNguyen112/IOSAppCounter",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -157,14 +153,10 @@ skills: [
       description:
         "A wireless robot car built using the microcontroller and Bluetooth module, controlled from a laptop or smartphone via UART communication. Demonstrates embedded systems, Bluetooth configuration, and PWM-based motor control.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "C",
+        "Bluetooth module",
+        "UART",
+        "PWM motor control"
       ],
       links: [
         {
@@ -184,19 +176,15 @@ skills: [
       description:
         "A traffic light control system developed using a microcontroller programed via C. Simulates a real-world intersection with North-South, East-West vehicle lanes, and pedestrian crossing functionality.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "C",
+        "Microcontroller",
+        "State machine",
+        "GPIO"
       ],
       links: [
         {
           type: "Source",
-          href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Bluetooth_Controlled_Robot_Car",
+          href: "https://github.com/EthanNguyen112/Uni-Projects/tree/main/Traffic_Light_Controller",
           icon: <Icons.github className="size-3" />,
         },
       ],
