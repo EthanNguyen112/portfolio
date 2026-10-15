@@ -8,7 +8,9 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
+import { OPEN_PALETTE_EVENT } from "@/components/command-palette";
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -48,7 +50,7 @@ export default function Navbar() {
     <div className="pointer-events-none fixed inset-0 z-30">
 
       {/* TOP LEFT NAME */}
-     <div className="w-full flex items-center px-6 py-3 
+     <div className="w-full flex items-center px-6 py-4 
                   backdrop-blur-xl bg-white/50 dark:bg-black/30 
                   border-b border-black/10 dark:border-white/10">
 
@@ -76,17 +78,16 @@ export default function Navbar() {
 
         {/* HAMBURGER / X BUTTON */}
         <button
-          ref={buttonRef}
-          onClick={() => setOpen(!open)}
-          className={cn(
-            buttonVariants({ variant: "ghost", size: "icon" }),
-            "size-10 bg-black/20 dark:bg-black/40 backdrop-blur-xl border border-white/10 transition-colors"
-          )}
+          onClick={() => {
+            setOpen(false);
+            window.dispatchEvent(new Event(OPEN_PALETTE_EVENT));
+          }}
+          className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "size-10")}
+          aria-label="Open command palette"
         >
-          <div className="transition-transform duration-200">
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
-          </div>
+          <Search className="size-4" />
         </button>
+        <Separator />
 
         {/* DROPDOWN */}
         <div

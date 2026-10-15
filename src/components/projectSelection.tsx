@@ -15,7 +15,7 @@ export function ProjectSection() {
   const [view, setView] = useState<"orbit" | "grid">("orbit");
 
   return (
-    <section id="projects" className="py-16 space-y-8">
+    <div className="py-16 space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between z-20 relative">
         <h2 className="font-heading text-3xl font-bold">Project View</h2>
@@ -67,6 +67,6 @@ export function ProjectSection() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
 }
